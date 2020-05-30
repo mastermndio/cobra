@@ -28,7 +28,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "lint": "eslint . --ext .js --cache",
-    "test":  "echo You have successfully run some tests" 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
