@@ -1,164 +1,108 @@
-# gatsby-starter-try-ghost
-[![Released under MIT license.](https://badgen.net/github/license/micromatch/micromatch)](https://github.com/styxlab/gatsby-starter-try-ghost/blob/master/LICENSE)
-[![gatsby-starter-try-ghost npm package version.](https://badgen.net/npm/v/gatsby-starter-try-ghost)](https://www.npmjs.org/package/gatsby-starter-try-ghost)
+# Gatsby Starter Ghost
 
-A Gatsby starter for creating blogs from headless [Ghost CMS](https://ghost.org/changelog/jamstack/). 
+A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
 
-Turn your Ghost blog into a flaring fast static website. This Gatsby theme is a front-end replacement of the Ghost Handlebars engine featuring the standard Ghost Casper skin and functionality. All content is sourced from a headless Ghost CMS.
+**Demo:** https://gatsby.ghost.org
 
+&nbsp;
 
-## Demo
-
->Play with the [Demo](https://styxlab.github.io) to get a first impression.
-
-
-[![gatsby-starter-try-ghost](https://static.gotsby.org/v1/assets/images/jamify-demo.png)](https://styxlab.github.io) 
+![gatsby-starter-ghost](https://user-images.githubusercontent.com/120485/50913567-8ab8e380-142c-11e9-9e78-de02ded12fc6.jpg)
 
 &nbsp;
 
 
-## Features
-
-- Ghost Casper look and feel
-- Infinite Scroll ✨ 🆕
-- [Gatsby images](https://using-gatsby-image.gatsbyjs.org/) 🚀 🆕
-- Sticky navigation headers
-- Hover on author avatar
-- Styled 404 page
-- SEO optimized
-- Fully responsive
-- Advanced routing 🆕
-- Composable and extensible
-
-
-## Performance
-
-![Lighthouse Score](https://static.gotsby.org/v1/assets/images/jamify-lighthouse.png)
-
-## Included Plugins
-
-The following plugins have been included for convenience:
-
-| Name | Version | Description |   
-| ---- | ------- | ----------- |
-| [`gatsby-theme-ghost-dark-mode`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-dark-mode) | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-dark-mode)](https://www.npmjs.com/package/gatsby-theme-ghost-dark-mode) | Dark mode toggle 🌗 |
-| [`gatsby-rehype-ghost-links`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-rehype-ghost-links) | [![version](https://badgen.net/npm/v/gatsby-rehype-ghost-links)](https://www.npmjs.com/package/gatsby-rehype-ghost-links) | Rewrite CMS links from absolute to relative |
-| [`gatsby-rehype-prismjs`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-rehype-prismjs) | [![version](https://badgen.net/npm/v/gatsby-rehype-prismjs)](https://www.npmjs.com/package/gatsby-rehype-prismjs) | Syntax highlighting with [PrismJS](http://prismjs.com/) |
-
-
-If you don't need them, you can take them out in `gatsby-config.js` and `package.json` which may save you some time during the build process.
-
-
-## More Plugins
-
-Additional features can be integrated by installing Gatsby themes or plugins. The following plugins have been tested to work with [`gatsby-starter-try-ghost`](https://github.com/styxlab/gatsby-starter-try-ghost):
-
-| Name | Version | Description |   
-| ---- | ------- | ----------- |
-| [`gatsby-theme-ghost-contact`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-contact) | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-contact)](https://www.npmjs.com/package/gatsby-theme-ghost-contact) | Contact page |
-| [`gatsby-theme-ghost-commento`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-commento) 🆕 | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-commento)](https://www.npmjs.com/package/gatsby-theme-ghost-commento) | Commenting system with [Commento](https://commento.io/) |
-| [`gatsby-theme-ghost-toc`](https://github.com/styxlab/gatsby-theme-try-ghost/tree/master/packages/gatsby-theme-ghost-toc) 🆕 | [![version](https://badgen.net/npm/v/gatsby-theme-ghost-toc)](https://www.npmjs.com/package/gatsby-theme-ghost-toc) | Table of Contents |
-| [`gatsby-plugin-ackee-tracker`](https://github.com/burnsy/gatsby-plugin-ackee-tracker) | [![version](https://badgen.net/npm/v/gatsby-plugin-ackee-tracker)](https://www.npmjs.com/package/gatsby-plugin-ackee-tracker) | Site tracking with [Ackee](https://github.com/electerious/Ackee) |
-| [`gatsby-plugin-google-analytics`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics) | [![version](https://badgen.net/npm/v/gatsby-plugin-google-analytics)](https://www.npmjs.com/package/gatsby-plugin-google-analytics) | Site tracking with [Google Analytics](https://developers.google.com/analytics) |
-
-
-## Getting Started
-
-1. Install this starter by running
-
-    ```bash
-    gatsby new try-ghost https://github.com/styxlab/gatsby-starter-try-ghost
-    ```
-
-2. Change directory
-
-    ```bash
-    cd try-ghost
-    ```
-
-3. Run
-
-    ```bash
-    gatsby develop
-    ```
-    and visit your site at `http://localhost:8000`.
-
-## Configure
-
-```js
-    //siteConfig.js
-    module.exports = {
-        // Do not include a trailing slash!
-        siteUrl: `https://your-blog.com`,
-
-        // Maximum number of post shown per page
-        // Infinite Scroll: Initial chunk of posts, subsequent posts are fetched one by one
-        postsPerPage: 3, 
-    
-        // This allows an alternative site title for meta data for pages.
-        siteTitleMeta: `Gatsby Starter Ghost CMS`, 
-
-        // This allows an site description for meta data for pages.
-        siteDescriptionMeta: `Turn your Ghost blog into a flaring fast static site with Gatsby`, 
-    
-        // Change to the width and height of your default share image
-        shareImageWidth: 1000, 
-        shareImageHeight: 523,
-    
-        // Used for App and Offline manifest e.g. Mobile Home Screen
-        shortTitle: `Ghost`, 
-        siteIcon: `favicon.png`, 
-        backgroundColor: `#e9e9e9`,
-        themeColor: `#15171A`,
-
-        // Overwrite navigation menu (default: []), label is case sensitive
-        // overwriteGhostNavigation: [{ label: `Home`, url: `/` }],
-    }
-```
-
-In the configuration shown above, the most important fields to be changed are `siteUrl`, `siteTitleMeta` and `siteDescriptionMeta`. Update at least those to fit your needs.
-
-
-## Ghost Content API keys
-
-All content is sourced from a Ghost CMS. By default, content is fetched from the demo location at `https://cms.gotsby.org`. Surely you want to source your own content. In your base directory `try-ghost`, add a new file `.ghost.json` that contains the following JSON structure:
+# Installing
 
 ```bash
-
-    {
-        "development": {
-            "apiUrl": "http://localhost:2368",
-            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
-        },
-        "production": {
-            "apiUrl": "http://localhost:2368",
-            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
-        }
-    }
+# With Gatsby CLI
+gatsby new gatsby-starter-ghost https://github.com/TryGhost/gatsby-starter-ghost.git
 ```
-
-Change the url and keys to match your own Ghost CMS Content API keys.
-
-## Deploy
 
 ```bash
-    gatsby build
+# From Source
+git clone https://github.com/TryGhost/gatsby-starter-ghost.git
+cd gatsby-starter-ghost
 ```
 
-After completion of the build process your static site can be found in the `public/` folder. Copy those files over to your webserver.
+Then install dependencies
 
-## Deploy on Gatsby Cloud
+```bash
+yarn
+```
 
-Fork `gatsby-starter-try-ghost` in GitHub. After logging into Gatsby Cloud make sure Gatsby Cloud has access rights to your forked repository. Select *I already have a Gatsby Site* and then pick *gatsby-starter-try-ghost*. Skip integrations. For a first test also skip content keys. The build should start immediately and show the demo site. Provide content keys in order to source in your own content from Ghost CMS.
+&nbsp;
 
-## Ensure headless mode of Ghost CMS
+# Running
 
-For best SEO results it is strongly recommended to disable the default Ghost Handlebars theme front-end by selecting the *Make this site private* flag within your Ghost admin settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the authoritative source for search engines.
+Start the development server. You now have a Gatsby site pulling content from headless Ghost.
 
-## Reporting issues
+```bash
+gatsby develop
+```
 
-Please report all bugs and issues at [gatsby-theme-try-ghost/issues](https://github.com/styxlab/gatsby-theme-try-ghost/issues) as all development is happening there.
+By default, the starter will populate content from a default Ghost install located at https://gatsby.ghost.io.
+
+To use your own install, you will need to edit the `.ghost.json` config file with your credentials. Change the `apiUrl` value to the URL of your Ghost site. For Ghost(Pro) customers, this is the Ghost URL ending in `.ghost.io`, and for people using the self-hosted version of Ghost, it's the same URL used to access your site.
+
+Next, update the `contentApiKey` value to a key associated with the Ghost site. A key can be provided by creating an integration within Ghost Admin. Navigate to Integrations and click "Add new integration". Name the integration appropriately and click create.
+
+To use this starter without issues, your Ghost installation needs to be at least on version `2.10.0`.
+
+The default Ghost version that is used for this starter is `3.x`. If your Ghost installation is on a lower version, you will need to pass in a `version` property in your `.ghost.json` settings:
+
+**Ghost >=2.10.0 <3.0.0**
+```json
+{
+    "apiUrl": "https://gatsby.ghost.io",
+    "contentApiKey": "9cc5c67c358edfdd81455149d0",
+    "version": "v2"
+}
+```
+
+**Ghost <=3.0.0**
+```json
+{
+    "apiUrl": "https://gatsby.ghost.io",
+    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+}
+```
+
+&nbsp;
+
+# Deploying with Netlify
+
+The starter contains three config files specifically for deploying with Netlify. A `netlify.toml` file for build settings, a `/static/_headers` file with default security headers set for all routes, and `/static/_redirects` to set Netlify custom domain redirects.
+
+To deploy to your Netlify account, hit the button below.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TryGhost/gatsby-starter-ghost)
+
+Content API Keys are generally not considered to be sensitive information, they exist so that they can be changed in the event of abuse; so most people commit it directly to their `.ghost.json` config file. If you prefer to keep this information out of your repository you can remove this config and set [Netlify ENV variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables) for production builds instead.
+
+Once deployed, you can set up a [Ghost + Netlify Integration](https://docs.ghost.org/integrations/netlify/) to use deploy hooks from Ghost to trigger Netlify rebuilds. That way, any time data changes in Ghost, your site will rebuild on Netlify.
+
+&nbsp;
+
+# Optimising
+
+You can disable the default Ghost Handlebars Theme front-end by enabling the `Make this site private` flag within your Ghost settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the source of truth for SEO.
+
+&nbsp;
+
+# Extra options
+
+```bash
+# Run a production build, locally
+gatsby build
+
+# Serve a production build, locally
+gatsby serve
+```
+
+Gatsby `develop` uses the `development` config in `.ghost.json` - while Gatsby `build` uses the `production` config.
+
+&nbsp;
 
 # Copyright & License
 
-Copyright (c) 2020 styxlab - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
