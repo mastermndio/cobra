@@ -20,8 +20,8 @@ import '../../styles/app.css'
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+    const twitterUrl = site.twitter ? `https://twitter.com/mastermndio` : null
+    const facebookUrl = null
 
     return (
         <>
@@ -54,7 +54,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>
                             { isHome ?
                                 <div className="site-banner">
-                                    <h1 className="site-banner-title">{site.title}</h1>
+                                    <h1 className="site-banner-title">{'Cobra'}</h1>
                                     <p className="site-banner-desc">{site.description}</p>
                                 </div> :
                                 null}
